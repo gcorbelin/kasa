@@ -9,11 +9,15 @@
 .card-wrapper {
   display: grid;
   gap: 1.25rem;
+  grid-template-columns: 1fr;
   margin-top: 1.375rem;
+  margin-bottom: 1.375rem;
 
   @media screen and (min-width: 768px) {
     gap: 3.75rem;
+    grid-template-columns: 1fr 1fr 1fr;
     margin-top: 3.625rem;
+    margin-bottom: 3.625rem;
     padding: 3.5rem 3.125rem;
     background-color: var(--surface-level-2);
     border-radius: var(--border-radius-xl);

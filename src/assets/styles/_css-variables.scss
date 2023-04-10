@@ -8,11 +8,10 @@
   --surface-level-2: #f6f6f6;
   --surface-level-3: var(--theme-color-1);
   --surface-gradient: linear-gradient(
-      180deg,
-      rgba(255, 255, 255, 0) 0%,
-      rgba(0, 0, 0, 0.5) 100%
-    ),
-    var(--theme-color-1);
+    180deg,
+    rgba(255, 255, 255, 0) 0%,
+    rgba(0, 0, 0, 0.5) 100%
+  );
 
   // Fonts
   --font-family-base: "Montserrat", arial, sans-serif;
