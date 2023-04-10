@@ -12,13 +12,13 @@ export const Error: React.FC = () => {
     return (
       <PageLayout>
         <div className={styles.error}>
-          <h1>Oops!</h1>
-          <p>Sorry, an unexpected error has occurred.</p>
-          <h2>{error.status}</h2>
-          <p>
-            <i>{error.statusText || ""}</i>
+          <h1 className={styles.title}>{error.status}</h1>
+          <p className={styles.complementary}>
+            Oups! La page que vous demandez n'existe pas.
           </p>
-          <Link to={`/`}>Back to homepage</Link>
+          <Link to={`/`} className={styles.link}>
+            Retourner sur la page d’accueil
+          </Link>
         </div>
       </PageLayout>
     );
