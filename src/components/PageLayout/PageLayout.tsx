@@ -14,8 +14,8 @@ export const PageLayout: React.FC<PageLayoutProps> = ({
   children,
 }) => (
   <div className={classNames(styles.layout, className)}>
-    <PageHeader></PageHeader>
+    <PageHeader />
     <main className={styles.main}>{children}</main>
-    <PageFooter></PageFooter>
+    <PageFooter />
   </div>
 );

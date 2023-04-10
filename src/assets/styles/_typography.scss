@@ -1,0 +1,15 @@
+// Links
+a {
+  color: var(--text-color-level-1);
+  text-decoration: none;
+
+  &:hover {
+    text-decoration: underline;
+  }
+}
+
+// Lists
+ul {
+  padding: 0;
+  list-style: none;
+}
