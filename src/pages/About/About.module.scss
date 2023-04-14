@@ -1,0 +1,21 @@
+.about-banner {
+  margin-top: 1rem;
+
+  @media screen and (min-width: 768px) {
+    margin-top: 2.75rem;
+  }
+}
+
+.about-content {
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+  margin-top: 1.25rem;
+  margin-bottom: 1.25rem;
+
+  @media screen and (min-width: 768px) {
+    gap: 2rem;
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+  }
+}
