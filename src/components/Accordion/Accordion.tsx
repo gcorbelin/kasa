@@ -6,6 +6,7 @@ import chevron from "../../assets/images/chevron.svg";
 interface AccordionProps {
   title: string;
   keyEvent: string;
+  size?: "default" | "small";
   className?: string;
   children: React.ReactNode;
 }
@@ -13,6 +14,7 @@ interface AccordionProps {
 export const Accordion: React.FC<AccordionProps> = ({
   title,
   keyEvent,
+  size = "default",
   className,
   children,
 }) => {
@@ -35,7 +37,10 @@ export const Accordion: React.FC<AccordionProps> = ({
       </button>
       {isOpen && (
         <div
-          className={styles["accordion-content"]}
+          className={classNames(
+            styles["accordion-content"],
+            size === "small" ? styles["accordion-content--small"] : ""
+          )}
           id={`${keyEvent}-content`}
           aria-labelledby={`${keyEvent}-header`}
         >

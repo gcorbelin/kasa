@@ -2,11 +2,18 @@ import React from "react";
 import { PageLayout } from "../../components/PageLayout/PageLayout";
 import { Banner } from "../../components/Banner/Banner";
 import bannerImg from "../../assets/images/banner-home.jpg";
-import apartments from "../../datas/apartments.json";
 import styles from "./Home.module.scss";
 import { Card } from "../../components/Card/Card";
+import { getApartments } from "../../api/apartments";
+import { useLoaderData } from "react-router-dom";
+import ApartmentModel from "../../models/apartment";
+
+export const homeLoader = () => {
+  return getApartments();
+};
 
 export const Home: React.FC = () => {
+  const apartments = useLoaderData() as ApartmentModel[];
   const apartmentsElem = apartments.map((apart) => (
     <Card
       key={apart.id}
