@@ -12,10 +12,14 @@ export const PageHeader: React.FC = () => (
     <nav>
       <ul className={styles["nav-list"]}>
         <li>
-          <NavLink to={`/`}>Accueil</NavLink>
+          <NavLink to={`/`} end>
+            Accueil
+          </NavLink>
         </li>
         <li>
-          <NavLink to={`/about`}>À propos</NavLink>
+          <NavLink to={`/about`} end>
+            À propos
+          </NavLink>
         </li>
       </ul>
     </nav>
