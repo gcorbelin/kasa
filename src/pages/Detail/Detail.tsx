@@ -2,11 +2,11 @@ import { useLoaderData } from "react-router-dom";
 import { PageLayout } from "../../components/PageLayout/PageLayout";
 import { getApartment } from "../../api/apartments";
 import ApartmentModel from "../../models/apartment";
-import { Banner } from "../../components/Banner/Banner";
 import { Accordion } from "../../components/Accordion/Accordion";
 import starInactive from "../../assets/images/star.svg";
 import starActive from "../../assets/images/star-active.svg";
 import styles from "./Detail.module.scss";
+import { Slideshow } from "../../components/Slideshow/Slideshow";
 
 export function loader({ params }: any) {
   const apartment = getApartment(params.detailId);
@@ -63,13 +63,7 @@ export const Detail: React.FC = () => {
   return (
     <PageLayout>
       <div className={styles["detail-wrapper"]}>
-        <div className={styles["detail-banner"]}>
-          <Banner
-            imgSrc={apartmentDetails.pictures[0]}
-            size="large"
-            hasOverlay={false}
-          />
-        </div>
+        <Slideshow imgUrls={apartmentDetails.pictures} />
         <div className={styles["detail-header"]}>
           <div className={styles["detail-summary"]}>
             <div className={styles["detail-title"]}>
