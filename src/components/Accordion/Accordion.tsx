@@ -25,6 +25,7 @@ export const Accordion: React.FC<AccordionProps> = ({
       <button
         className={classNames(
           styles["accordion-header"],
+          size === "small" ? styles["accordion-header--small"] : "",
           isOpen ? styles["is-open"] : ""
         )}
         type="button"

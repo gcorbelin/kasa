@@ -1,20 +1,14 @@
 html {
-    scroll-behavior: smooth;
-    font-size: var(--font-size-base);
+  scroll-behavior: smooth;
+  font-size: var(--font-size-base);
 }
 
 body,
 .app {
-    display: flex;
-    flex-direction: column;
-    background-color: var(--surface-level-1);
-    color: var(--text-color-level-1);
-    font-size: var(--font-size-base);
-    font-family: var(--font-family-base);
-}
-
-hr {
-    margin-block-start: spacer(2);
-    margin-block-end: spacer(2);
-    border: thin solid var(--theme-color-2-200);
+  display: flex;
+  flex-direction: column;
+  background-color: var(--surface-level-1);
+  color: var(--text-color-level-1);
+  font-size: var(--font-size-base);
+  font-family: var(--font-family-base);
 }

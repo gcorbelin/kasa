@@ -57,9 +57,7 @@ export const Detail: React.FC = () => {
           <div className={styles["detail-summary"]}>
             <div className={styles["detail-title"]}>
               <h1>{apartmentDetails.title}</h1>
-              <div className={styles.locatiion}>
-                {apartmentDetails.location}
-              </div>
+              <div className={styles.location}>{apartmentDetails.location}</div>
             </div>
             <div className={styles["detail-tags"]}>{tagsElement}</div>
           </div>
