@@ -1,3 +1,4 @@
+import React from "react";
 import { useLoaderData } from "react-router-dom";
 import { PageLayout } from "../../components/PageLayout/PageLayout";
 import { getApartment } from "../../api/apartments";
@@ -36,25 +37,13 @@ export const Detail: React.FC = () => {
     </span>
   ));
   const ratingElement = [...Array(5)].map((star, index) => (
-    <>
+    <React.Fragment key={`star-${index}`}>
       {parseInt(apartmentDetails.rating, 10) > index ? (
-        <img
-          src={starActive}
-          alt=""
-          height={13}
-          className={styles.rating}
-          key={`star-${index}`}
-        />
+        <img src={starActive} alt="" height={13} className={styles.rating} />
       ) : (
-        <img
-          src={starInactive}
-          alt=""
-          height={13}
-          className={styles.rating}
-          key={`star-${index}`}
-        />
+        <img src={starInactive} alt="" height={13} className={styles.rating} />
       )}
-    </>
+    </React.Fragment>
   ));
   const equipmentsElements = apartmentDetails.equipments.map((eq, index) => (
     <li key={`equipment-${index}`}>{eq}</li>
