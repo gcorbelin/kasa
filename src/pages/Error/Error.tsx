@@ -6,7 +6,6 @@ import { PageLayout } from "../../components/PageLayout/PageLayout";
 
 export const Error: React.FC = () => {
   const error = useRouteError();
-  console.error(error);
 
   if (isRouteErrorResponse(error)) {
     return (
