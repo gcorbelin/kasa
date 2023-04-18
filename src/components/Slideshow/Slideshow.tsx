@@ -17,7 +17,7 @@ export const Slideshow: React.FC<SlideshowProps> = ({ imgUrls, className }) => {
   const goToPreviousImg = (e: React.MouseEvent) => {
     e.preventDefault();
     if (currentImg === 0) {
-      setCurrentImg(nbImgs);
+      setCurrentImg(nbImgs - 1);
     } else {
       setCurrentImg(currentImg - 1);
     }
